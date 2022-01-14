@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'ru.nsu.zdarovamujiki'
+mainClassName = 'ru.nsu.ccfit.zdarovamujiki.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.projectlombok:lombok:1.18.20'
+    implementation 'dnsjava:dnsjava:3.4.3'
+}
+
+jar {
+    archiveClassifier.set('')
+    archiveVersion.set('')
+    manifest {
+        attributes(
+                'Main-Class': 'ru.nsu.ccfit.zdarovamujiki.Main'
+        )
+    }
+}
